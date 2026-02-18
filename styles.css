@@ -1,6 +1,4 @@
-/* =========================
-   COLOR VARIABLES
-========================= */
+/* COLOR VARIABLES */
 :root {
     --primary-color: #00406d;
     --secondary-color: #15b5ea;
@@ -9,9 +7,7 @@
     --header-height: 150px;
 }
 
-/* =========================
-   BASE RESET
-========================= */
+/* BASE RESET*/
 * {
     box-sizing: border-box;
     margin: 0;
@@ -27,17 +23,13 @@ body {
     scroll-behavior: smooth;
 }
 
-/* =========================
-   REMOVE ALL SECTION SPACING
-========================= */
+/* SECTION SPACING */
 section {
     padding: 0 20px;
     scroll-margin-top: calc(var(--header-height) + 20px);
 }
 
-/* =========================
-   TOP BAR (FIXED)
-========================= */
+/*  TOP BAR */
 .top-bar {
     display: flex;
     align-items: center;
@@ -69,9 +61,7 @@ section {
     text-align: center;
 }
 
-/* =========================
-   HAMBURGER
-========================= */
+/* HAMBURGER*/
 .hamburger {
     font-size: 2rem;
     background: none;
@@ -88,9 +78,7 @@ section {
     transform: scale(1.1);
 }
 
-/* =========================
-   SIDE NAVIGATION
-========================= */
+/* SIDE NAVIGATION */
 .nav-menu {
     background-color: var(--primary-color);
     position: fixed;
@@ -125,17 +113,13 @@ section {
         transform: scale(1.1);
 }
 
-/* =========================
-   MAIN CONTENT
-========================= */
+/* MAIN CONTENT*/
 main {
     padding-top: calc(var(--header-height) + 20px);
     min-height: calc(100vh - var(--header-height) - 40px);
 }
 
-/* =========================
-   HERO SECTION
-========================= */
+/* HERO SECTION*/
 .hero {
     width: 90%;
     margin: 12px auto 0 auto;
@@ -188,9 +172,7 @@ main {
     }
 }
 
-/* =========================
-   SECTION SEPARATOR
-========================= */
+/*  SECTION SEPARATOR */
 .section-separator {
     padding: 100px 0;
     display: flex;
@@ -229,9 +211,7 @@ main {
     }
 }
 
-/* =========================
-   TEXT SECTIONS
-========================= */
+/* TEXT SECTIONS*/
 #what-we-do,
 #why-use-us {
     text-align: center;
@@ -249,7 +229,6 @@ main {
 #what-we-do p:hover,
 #why-use-us p:hover {
     transform: scale(1.05);
-    /* toned down */
 }
 
 #what-we-do h2,
@@ -259,9 +238,7 @@ main {
     font-size: 2rem;
 }
 
-/* =========================
-   SERVICES SECTION
-========================= */
+/* SERVICES SECTION*/
 .services {
     width: 100%;
     padding: 60px 10%;
@@ -291,10 +268,6 @@ main {
     transition: opacity 0.2s ease;
 }
 
-.accordion-header:hover {
-    opacity: 0.85;
-    /* subtle instead of color */
-}
 
 .accordion-left {
     display: flex;
@@ -344,9 +317,7 @@ main {
     background-repeat: no-repeat;
 }
 
-/* =========================
-   ICON WRAPPER
-========================= */
+/* ICON WRAPPER */
 .icon-wrapper {
     width: 65px;
     height: 65px;
@@ -364,9 +335,7 @@ main {
     object-fit: contain;
 }
 
-/* =========================
-   CONTACT SECTION
-========================= */
+/* CONTACT SECTION */
 .contact-info {
     background-color: #ffffff;
     padding: 0 2rem 3rem 2rem;
@@ -400,23 +369,18 @@ main {
     object-fit: contain;
 }
 
-/* =========================
-   FOOTER
-========================= */
+/*FOOTER*/
+
 .footer {
     background-color: var(--primary-color);
     color: white;
     text-align: center;
     padding: 1.2rem;
     font-size: 0.9rem;
-
 }
-/* =========================
-   MOBILE RESPONSIVE FIXES
-========================= */
-@media (max-width: 768px) {
+/* MOBILE RESPONSIVE */
 
-    /* Shrink header height */
+@media (max-width: 768px) {
     :root {
         --header-height: 90px;
     }
@@ -455,7 +419,6 @@ main {
         font-size: 1.1rem;
     }
 
-    /* Contact box fix */
     .contact-info {
         padding: 1.5rem;
         margin: 1.5rem;
