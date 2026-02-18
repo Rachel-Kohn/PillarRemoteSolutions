@@ -1,8 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    /* =========================
-       HAMBURGER MENU
-    ========================= */
+    /* HAMBURGER MENU*/
 
     const hamburger = document.getElementById("hamburger");
     const navMenu = document.getElementById("navMenu");
@@ -36,9 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    /* =========================
-       ACCORDION
-    ========================= */
+    /* ACCORDION*/
 
     const headers = document.querySelectorAll(".accordion-header");
     const items = document.querySelectorAll(".accordion-item");
@@ -73,7 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         });
 
-        // Close ALL accordion items when clicking outside
+        // Close accordion items when clicking outside
         document.addEventListener("click", (e) => {
             if (!servicesSection.contains(e.target)) {
                 items.forEach(item => {
@@ -85,10 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    /* =========================
-       NAV SMOOTH SCROLL
-       (FIXES HEADER + ACCORDION SHIFT)
-    ========================= */
+    /* NAV SMOOTH SCROLL*/
 
     const navLinks = document.querySelectorAll('.nav-menu a');
 
@@ -102,20 +95,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
             if (!target) return;
 
-            // 1️⃣ Close all accordions first
+            // Close all accordions
             items.forEach(item => {
                 item.classList.remove("active");
                 const content = item.querySelector(".accordion-content");
                 if (content) content.style.maxHeight = null;
             });
 
-            // 2️⃣ Close nav menu
+            // Close nav menu
             if (navMenu) {
                 navMenu.style.right = "-250px";
                 menuOpen = false;
             }
 
-            // 3️⃣ Wait for layout to stabilize
+            // Wait for layout to stabilize
             requestAnimationFrame(() => {
                 requestAnimationFrame(() => {
 
