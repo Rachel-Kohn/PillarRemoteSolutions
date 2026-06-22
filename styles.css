@@ -214,7 +214,7 @@ main {
 /* TEXT SECTIONS*/
 #what-we-do,
 #why-use-us {
-    text-align: center;
+    text-align: justify;
 }
 
 #what-we-do p,
@@ -271,7 +271,7 @@ main {
 
 .accordion-left {
     display: flex;
-    align-items: center;
+    align-items: justify;
     gap: 20px;
 }
 
