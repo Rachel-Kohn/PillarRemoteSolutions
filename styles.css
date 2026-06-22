@@ -29,7 +29,7 @@ section {
     scroll-margin-top: calc(var(--header-height) + 20px);
 }
 
-/* TOP BAR */
+/*  TOP BAR */
 .top-bar {
     display: flex;
     align-items: center;
@@ -110,6 +110,7 @@ section {
 
 .nav-menu li a:hover {
     color: var(--secondary-color);
+        transform: scale(1.1);
 }
 
 /* MAIN CONTENT*/
@@ -144,18 +145,34 @@ main {
 }
 
 @keyframes danceLR {
-    0% { transform: translateX(0); }
-    50% { transform: translateX(-15px); }
-    100% { transform: translateX(0); }
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(-15px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
 }
 
 @keyframes danceRL {
-    0% { transform: translateX(0); }
-    50% { transform: translateX(15px); }
-    100% { transform: translateX(0); }
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(15px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
 }
 
-/* SECTION SEPARATOR */
+/*  SECTION SEPARATOR */
 .section-separator {
     padding: 100px 0;
     display: flex;
@@ -169,22 +186,35 @@ main {
 
 .logo-dots img {
     width: 40px;
+    height: auto;
     opacity: 0.4;
     animation: pulse 1.8s infinite ease-in-out;
 }
 
-.logo-dots img:nth-child(2) { animation-delay: 0.3s; }
-.logo-dots img:nth-child(3) { animation-delay: 0.6s; }
-
-@keyframes pulse {
-    0%, 100% { opacity: 0.3; }
-    50% { opacity: 1; }
+.logo-dots img:nth-child(2) {
+    animation-delay: 0.3s;
 }
 
-/* TEXT SECTIONS (JUSTIFIED FIX) */
+.logo-dots img:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 0.3;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+/* TEXT SECTIONS*/
 #what-we-do,
 #why-use-us {
-    text-align: justify;
+    text-align: center;
 }
 
 #what-we-do p,
@@ -193,8 +223,12 @@ main {
     margin: 20px auto 0;
     line-height: 2;
     font-size: 1.5rem;
-    text-align: justify;
     transition: transform 0.3s ease;
+}
+
+#what-we-do p:hover,
+#why-use-us p:hover {
+    transform: scale(1.05);
 }
 
 #what-we-do h2,
@@ -231,7 +265,9 @@ main {
     font-size: 1.6rem;
     font-weight: 600;
     color: var(--primary-color);
+    transition: opacity 0.2s ease;
 }
+
 
 .accordion-left {
     display: flex;
@@ -256,6 +292,7 @@ main {
 
 .accordion-content ul {
     list-style: none;
+    padding-left: 0;
     margin-top: 15px;
 }
 
@@ -266,7 +303,6 @@ main {
     font-size: 1.5rem;
     line-height: 2;
     color: var(--text-color);
-    text-align: justify;
 }
 
 .accordion-content li::before {
@@ -290,6 +326,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0;
 }
 
 .icon-wrapper img {
@@ -300,13 +337,13 @@ main {
 
 /* CONTACT SECTION */
 .contact-info {
-    background: #fff;
-    padding: 0 2rem 3rem;
+    background-color: #ffffff;
+    padding: 0 2rem 3rem 2rem;
     text-align: center;
     border-radius: 10px;
     max-width: 800px;
     margin: 2rem auto;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
 }
 
 .contact-info h2 {
@@ -317,20 +354,23 @@ main {
 .contact-info p {
     font-size: 1.5rem;
     line-height: 2;
+    color: var(--text-color);
     margin-top: 20px;
+
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 15px;
-    text-align: justify;
 }
 
 .contact-info p img {
     width: 40px;
     height: 40px;
+    object-fit: contain;
 }
 
-/* FOOTER */
+/*FOOTER*/
+
 .footer {
     background-color: var(--primary-color);
     color: white;
@@ -338,11 +378,16 @@ main {
     padding: 1.2rem;
     font-size: 0.9rem;
 }
+/* MOBILE RESPONSIVE */
 
-/* MOBILE */
 @media (max-width: 768px) {
     :root {
         --header-height: 90px;
+    }
+
+    .top-bar {
+        height: var(--header-height);
+        padding: 0 1rem;
     }
 
     .logo img {
@@ -361,19 +406,17 @@ main {
         padding-top: calc(var(--header-height) + 10px);
     }
 
+    /* Hero text smaller */
     .line {
         font-size: 1.6rem;
     }
 
+    /* Paragraphs smaller */
     #what-we-do p,
     #why-use-us p,
     .accordion-content li,
     .contact-info p {
         font-size: 1.1rem;
-    }
-
-    p, li {
-        text-align: left;
     }
 
     .contact-info {
@@ -385,10 +428,12 @@ main {
         flex-direction: column;
         gap: 8px;
         text-align: center;
+        word-wrap: break-word;
     }
 
     .contact-info p img {
         width: 30px;
         height: 30px;
     }
+
 }
