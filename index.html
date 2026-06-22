@@ -1,380 +1,457 @@
-/* COLOR VARIABLES */
-:root {
-    --primary-color: #00406d;
-    --secondary-color: #15b5ea;
-    --text-color: #00406d;
-    --background-color: #ffffff;
-    --header-height: 150px;
-}
+<!DOCTYPE html>
+<html lang="en">
 
-/* BASE RESET*/
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pillar Remote Solutions</title>
+    <link rel="stylesheet" href="styles.css" />
 
-html,
-body {
-    height: 100%;
-    font-family: 'Poppins', system-ui, sans-serif;
-    background-color: var(--background-color);
-    color: var(--text-color);
-    scroll-behavior: smooth;
-}
+    <!-- Tab Icon -->
+    <link rel="icon" type="image/png" href="images/logo.JPG" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
-/* SECTION SPACING */
-section {
-    padding: 0 20px;
-    scroll-margin-top: calc(var(--header-height) + 20px);
-}
+</head>
 
-/* GLOBAL FIX: CENTER CONTENT WIDTH CONSISTENTLY */
-section > * {
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
-}
+<body>
 
-/* TOP BAR */
-.top-bar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: var(--primary-color);
-    height: var(--header-height);
-    padding: 0 1.5rem;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1001;
-    color: white;
-}
+    <!-- Top Bar -->
+    <header class="top-bar">
+        <!-- Logo -->
+        <div class="logo">
+            <img src="images/blueLogo.JPG" alt="Pillar Remote Logo">
+        </div>
+        <!-- Company Name -->
+        <div class="company-name">
 
-.top-bar * {
-    color: white;
-}
+        </div>
+        <!-- Hamburger -->
+        <button class="hamburger" id="hamburger">
+            &#9776;
+        </button>
+    </header>
 
-.logo img {
-    height: 125px;
-    width: auto;
-}
+    <!-- Side Navigation Menu -->
+    <nav class="nav-menu" id="navMenu">
+        <ul>
+            <li><a href="#what-we-do">What We Do</a></li>
+            <li><a href="#industries">Industries We Serve</a></li>
+            <li><a href="#why-use-us">Why Use Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-.company-name {
-    font-weight: 600;
-    font-size: 1.1rem;
-    flex: 1;
-    text-align: center;
-}
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>
+                <span class="line line1">Let our employees be the</span><br>
+                <span class="line line2">PILLAR of your business.</span>
+            </h1>
+        </section>
 
-/* HAMBURGER*/
-.hamburger {
-    font-size: 2rem;
-    background: none;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    color: white;
-    transition: color 0.2s ease, transform 0.2s ease;
-}
+        <!-- Separator -->
+        <div class="section-separator">
+            <div class="logo-dots">
+                <img src="images/logo.JPG" alt="logo">
+                <img src="images/logo.JPG" alt="logo">
+                <img src="images/logo.JPG" alt="logo">
+            </div>
+        </div>
 
-.hamburger:hover {
-    color: var(--secondary-color);
-    transform: scale(1.1);
-}
+        <!-- What we do Section -->
+        <section id="what-we-do">
+            <h2>What We Do</h2>
+            <p>We help businesses build dependable, full-time remote teams. We handle recruiting, employment, payroll,
+                compliance, and
+                HR so you get a dedicated team member who works your hours, follows your processes, and integrates
+                seamlessly into your
+                operation. You manage the work, we handle everything else.</p>
+        </section>
 
-/* SIDE NAVIGATION */
-.nav-menu {
-    background-color: var(--primary-color);
-    position: fixed;
-    top: 0;
-    right: -250px;
-    width: 250px;
-    height: 100%;
-    transition: right 0.3s ease;
-    z-index: 1000;
-    padding-top: var(--header-height);
-    box-shadow: -2px 0 8px rgba(0, 0, 0, 0.2);
-}
+        <!-- Separator -->
+        <div class="section-separator">
+            <div class="logo-dots">
+                <img src="images/logo.JPG" alt="logo">
+                <img src="images/logo.JPG" alt="logo">
+                <img src="images/logo.JPG" alt="logo">
+            </div>
+        </div>
 
-.nav-menu ul {
-    list-style: none;
-}
 
-.nav-menu li {
-    padding: 1rem 2rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    font-weight: 500;
-}
+        <!-- Services -->
 
-.nav-menu li a {
-    color: white;
-    text-decoration: none;
-    transition: opacity 0.2s ease;
-}
+        <section class="services" id="industries">
+            <h2>Industries We Serve</h2>
+            <!-- 1 -->
+            <div class="accordion-item">
+                <button class="accordion-header">
+                    <div class="accordion-left">
+                        <div class="icon-wrapper">
+                            <img src="images/Administrative & Executive Support.png" alt="">
+                        </div>
+                        <span>Administrative & Executive Support</span>
+                    </div>
+                    <span class="accordion-icon">+</span>
+                </button>
+                <div class="accordion-content">
+                    <ul>
+                        <li>Virtual Assistants (email/calendar management, travel, research)</li>
+                        <li>Executive Assistants (meeting prep, follow-ups, stakeholder coordination)</li>
+                        <li>Data Entry Specialists (CRM updates, document cleanup, spreadsheets)</li>
+                        <li>Project Coordinators (task tracking, timelines, vendor follow-up)</li>
+                        <li>Operations Assistants (onboarding checklists, reporting)</li>
+                    </ul>
+                </div>
+            </div>
 
-.nav-menu li a:hover {
-    color: var(--secondary-color);
-}
+            <!-- 2 -->
+            <div class="accordion-item">
+                <button class="accordion-header">
+                    <div class="accordion-left">
+                        <div class="icon-wrapper">
+                            <img src="images/Customer Service & Call Centers.png" alt="">
+                        </div>
+                        <span>Customer Service & Call Centers</span>
+                    </div>
+                    <span class="accordion-icon">+</span>
+                </button>
+                <div class="accordion-content">
+                    <ul>
+                        <li>Customer Service Representatives (phone, email, chat support)</li>
+                        <li>Order/Returns Support (RMA processing, refunds, replacements)</li>
+                        <li>Appointment Setters / Dispatch (scheduling, confirmations, routing)</li>
+                        <li>Quality Assurance (call scoring, coaching notes)</li>
+                        <li>Retention / Billing Support (subscription changes, payment issues)</li>
+                    </ul>
+                </div>
+            </div>
 
-/* MAIN CONTENT*/
-main {
-    padding-top: calc(var(--header-height) + 20px);
-    min-height: calc(100vh - var(--header-height) - 40px);
-}
+            <!-- 3 -->
+            <div class="accordion-item">
+                <button class="accordion-header">
+                    <div class="accordion-left">
+                        <div class="icon-wrapper">
+                            <img src="images/Sales & Business Development.png" alt="">
+                        </div>
+                        <span>Sales & Business Development</span>
+                    </div>
+                    <span class="accordion-icon">+</span>
+                </button>
+                <div class="accordion-content">
+                    <ul>
+                        <li>Lead Researchers (list building, segmentation)</li>
+                        <li>SDRs / Inside Sales (outreach, qualification, meeting booking)</li>
+                        <li>Account Managers (renewals, upsell, relationship management)</li>
+                        <li>Proposal & CRM Admin (quotes, pipeline reporting)</li>
+                    </ul>
+                </div>
+            </div>
 
-/* HERO SECTION*/
-.hero {
-    width: 90%;
-    margin: 12px auto 0 auto;
-    padding-top: 90px;
-    text-align: center;
-    background: #ffffff;
-}
+            <!-- 4 -->
+            <div class="accordion-item">
+                <button class="accordion-header">
+                    <div class="accordion-left">
+                        <div class="icon-wrapper">
+                            <img src="images/Marketing, Creative & Content.png" alt="">
+                        </div>
+                        <span>Marketing, Creative & Content</span>
+                    </div>
+                    <span class="accordion-icon">+</span>
+                </button>
+                <div class="accordion-content">
+                    <ul>
+                        <li>Social Media Coordinators (posting, DMs, engagement)</li>
+                        <li>Copywriters (blogs, landing pages, email campaigns)</li>
+                        <li>Designers (ads, brand assets, presentations)</li>
+                        <li>SEO / PPC Specialists (keyword research, reporting)</li>
+                        <li>Video Editors (short-form edits, captions, thumbnails)</li>
+                    </ul>
+                </div>
+            </div>
 
-/* TYPOGRAPHY */
-.line {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    font-size: clamp(2rem, 5vw, 3rem);
-    margin: 0.5rem 0;
-    display: inline-block;
-}
+            <!-- 5 -->
+            <div class="accordion-item">
+                <button class="accordion-header">
+                    <div class="accordion-left">
+                        <div class="icon-wrapper">
+                            <img src="images/Finance & Accounting.png" alt="">
+                        </div>
+                        <span>Finance & Accounting</span>
+                    </div>
+                    <span class="accordion-icon">+</span>
+                </button>
+                <div class="accordion-content">
+                    <ul>
+                        <li>Bookkeepers (QuickBooks/Xero, reconciliations)</li>
+                        <li>Accounts Payable/Receivable (invoicing, collections)</li>
+                        <li>Payroll Support (timesheet checks, payroll reports)</li>
+                        <li>Financial Analysts (budgeting, forecasting)</li>
+                    </ul>
+                </div>
+            </div>
 
-/* ANIMATIONS */
-.line1 {
-    animation: danceLR 3s ease-in-out infinite alternate;
-}
+            <!-- 6 -->
+            <div class="accordion-item">
+                <button class="accordion-header">
+                    <div class="accordion-left">
+                        <div class="icon-wrapper">
+                            <img src="images/Human Resources & Recruiting.png" alt="">
+                        </div>
+                        <span>Human Resources & Recruiting</span>
+                    </div>
+                    <span class="accordion-icon">+</span>
+                </button>
+                <div class="accordion-content">
+                    <ul>
+                        <li>Recruiters (sourcing, screening, interviews)</li>
+                        <li>HR Coordinators (onboarding paperwork, HRIS updates)</li>
+                        <li>Training Coordinators (LMS setup, session scheduling)</li>
+                        <li>Benefits/Admin Support (enrollments, tracking)</li>
+                    </ul>
+                </div>
+            </div>
 
-.line2 {
-    animation: danceRL 3s ease-in-out infinite alternate;
-}
+            <!-- 7 -->
+            <div class="accordion-item">
+                <button class="accordion-header">
+                    <div class="accordion-left">
+                        <div class="icon-wrapper">
+                            <img src="images/Healthcare (Non-Clinical).png" alt="">
+                        </div>
+                        <span>Healthcare (Non-Clinical / Back Office)</span>
+                    </div>
+                    <span class="accordion-icon">+</span>
+                </button>
+                <div class="accordion-content">
+                    <ul>
+                        <li>Medical Billers (claims, denial follow-up)</li>
+                        <li>Insurance Verification / Prior Authorization</li>
+                        <li>Medical Records/Admin (EHR updates, compliance tracking)</li>
+                        <li>Patient Care Coordinators (scheduling, follow-ups)</li>
+                        <li>Healthcare Recruiting & Credentialing</li>
+                    </ul>
+                </div>
+            </div>
 
-@keyframes danceLR {
-    0% { transform: translateX(0); }
-    50% { transform: translateX(-15px); }
-    100% { transform: translateX(0); }
-}
+            <!-- 8 -->
+            <div class="accordion-item">
+                <button class="accordion-header">
+                    <div class="accordion-left">
+                        <div class="icon-wrapper">
+                            <img src="images/Insurance.png" alt="">
+                        </div>
+                        <span>Insurance</span>
+                    </div>
+                    <span class="accordion-icon">+</span>
+                </button>
+                <div class="accordion-content">
+                    <ul>
+                        <li>Insurance Assistants (policy quotes, renewals)</li>
+                        <li>Certificate Issuing & Document Processing (COIs)</li>
+                        <li>Claims Support (intake, documentation, follow-up)</li>
+                        <li>Customer Service (policy questions, billing)</li>
+                    </ul>
+                </div>
+            </div>
 
-@keyframes danceRL {
-    0% { transform: translateX(0); }
-    50% { transform: translateX(15px); }
-    100% { transform: translateX(0); }
-}
+            <!-- 9 -->
+            <div class="accordion-item">
+                <button class="accordion-header">
+                    <div class="accordion-left">
+                        <div class="icon-wrapper">
+                            <img src="images/Real Estate & Property Management.png" alt="">
+                        </div>
+                        <span>Real Estate & Property Management</span>
+                    </div>
+                    <span class="accordion-icon">+</span>
+                </button>
+                <div class="accordion-content">
+                    <ul>
+                        <li>Leasing Coordinators / Virtual Leasing Agents</li>
+                        <li>Property Administrators (maintenance, vendors)</li>
+                        <li>Back Office Support (lease renewals, documentation)</li>
+                        <li>Listing/Marketing Support (MLS updates, comps research)</li>
+                    </ul>
+                </div>
+            </div>
 
-/* SECTION SEPARATOR */
-.section-separator {
-    padding: 100px 0;
-    display: flex;
-    justify-content: center;
-}
+            <!-- 10 -->
+            <div class="accordion-item">
+                <button class="accordion-header">
+                    <div class="accordion-left">
+                        <div class="icon-wrapper">
+                            <img src="images/E-commerce & Retail.png" alt="">
+                        </div>
+                        <span>E-commerce & Retail</span>
+                    </div>
+                    <span class="accordion-icon">+</span>
+                </button>
+                <div class="accordion-content">
+                    <ul>
+                        <li>Order Processing Specialists</li>
+                        <li>Inventory Management</li>
+                        <li>Customer Support (order issues, returns)</li>
+                        <li>Product Catalog Management</li>
+                        <li>Digital Marketing Support</li>
+                    </ul>
+                </div>
+            </div>
 
-.logo-dots {
-    display: flex;
-    gap: 20px;
-}
+            <!-- 11 -->
+            <div class="accordion-item">
+                <button class="accordion-header">
+                    <div class="accordion-left">
+                        <div class="icon-wrapper">
+                            <img src="images/Durable Medical Equipment.png" alt="">
+                        </div>
+                        <span>Durable Medical Equipment (DME) & Medical Supplies</span>
+                    </div>
+                    <span class="accordion-icon">+</span>
+                </button>
+                <div class="accordion-content">
+                    <ul>
+                        <li>Order Fulfillment Support</li>
+                        <li>Billing & Collections Support</li>
+                        <li>Insurance Verification</li>
+                        <li>Customer Service (patient/provider support)</li>
+                    </ul>
+                </div>
+            </div>
 
-.logo-dots img {
-    width: 40px;
-    opacity: 0.4;
-    animation: pulse 1.8s infinite ease-in-out;
-}
+            <!-- 12 -->
+            <div class="accordion-item">
+                <button class="accordion-header">
+                    <div class="accordion-left">
+                        <div class="icon-wrapper">
+                            <img src="images/ABA Services & Behavioral Health.png" alt="">
+                        </div>
+                        <span>ABA Services & Behavioral Health</span>
+                    </div>
+                    <span class="accordion-icon">+</span>
+                </button>
+                <div class="accordion-content">
+                    <ul>
+                        <li>Scheduling & Coordination</li>
+                        <li>Documentation Support</li>
+                        <li>Claims Processing</li>
+                        <li>Recruiting/Staffing Support</li>
+                    </ul>
+                </div>
+            </div>
 
-.logo-dots img:nth-child(2) { animation-delay: 0.3s; }
-.logo-dots img:nth-child(3) { animation-delay: 0.6s; }
+            <!-- 13 -->
+            <div class="accordion-item">
+                <button class="accordion-header">
+                    <div class="accordion-left">
+                        <div class="icon-wrapper">
+                            <img src="images/Home Care & Long-Term Care.png" alt="">
+                        </div>
+                        <span>Home Care Agencies & Long-Term Care</span>
+                    </div>
+                    <span class="accordion-icon">+</span>
+                </button>
+                <div class="accordion-content">
+                    <ul>
+                        <li>Recruiting & Staffing Coordination</li>
+                        <li>Billing/Payroll Support</li>
+                        <li>Insurance Verification / Prior Authorization</li>
+                        <li>Records & Chart Audits</li>
+                    </ul>
+                </div>
+            </div>
 
-@keyframes pulse {
-    0%, 100% { opacity: 0.3; }
-    50% { opacity: 1; }
-}
+            <!-- 14 -->
+            <div class="accordion-item">
+                <button class="accordion-header">
+                    <div class="accordion-left">
+                        <div class="icon-wrapper">
+                            <img src="images/Logistics & Transportation.png" alt="">
+                        </div>
+                        <span>Logistics & Transportation</span>
+                    </div>
+                    <span class="accordion-icon">+</span>
+                </button>
+                <div class="accordion-content">
+                    <ul>
+                        <li>Dispatch & Scheduling</li>
+                        <li>Tracking & Customer Updates</li>
+                        <li>Invoicing & Documentation (BOLs, manifests)</li>
+                        <li>Freight Brokerage Support</li>
+                    </ul>
+                </div>
+            </div>
 
-/* TEXT SECTIONS (FIXED ALIGNMENT) */
-#what-we-do,
-#why-use-us {
-    text-align: justify;
-}
+            <!-- 15 -->
+            <div class="accordion-item">
+                <button class="accordion-header">
+                    <div class="accordion-left">
+                        <div class="icon-wrapper">
+                            <img src="images/Hospitality, Travel & Airlines.png" alt="">
+                        </div>
+                        <span>Hospitality, Travel & Airlines</span>
+                    </div>
+                    <span class="accordion-icon">+</span>
+                </button>
+                <div class="accordion-content">
+                    <ul>
+                        <li>Reservations & Ticketing Support</li>
+                        <li>Customer Communication</li>
+                        <li>Billing & Expense Tracking</li>
+                        <li>VIP Desk / Concierge Support</li>
+                    </ul>
+                </div>
+            </div>
 
-/* HEADINGS */
-#what-we-do h2,
-#why-use-us h2,
-.services h2 {
-    color: var(--primary-color);
-    font-size: 2rem;
-}
 
-/* PARAGRAPHS */
-#what-we-do p,
-#why-use-us p {
-    line-height: 2;
-    font-size: 1.5rem;
-    text-align: justify;
-    transition: transform 0.3s ease;
-}
+            <!-- Separator -->
+            <div class="section-separator">
+                <div class="logo-dots">
+                    <img src="images/logo.JPG" alt="logo">
+                    <img src="images/logo.JPG" alt="logo">
+                    <img src="images/logo.JPG" alt="logo">
+                </div>
+            </div>
 
-/* SERVICES */
-.services {
-    width: 100%;
-    padding: 60px 10%;
-}
+            <!-- Why use us Section -->
+            <section id="why-use-us">
+                <h2>Why Use Us</h2>
+                <p>We’re built for long-term success, not short-term placements. Our process focuses on proper role
+                    matching and clear
+                    expectations so employees ramp up quickly and stay productive. We make remote staffing simple,
+                    stable, and scalable,
+                    while expanding your team in a cost efficient-way.</p>
+            </section>
 
-.services h2 {
-    text-align: center;
-    margin-bottom: 60px;
-}
+            <!-- Separator -->
+            <div class="section-separator">
+                <div class="logo-dots">
+                    <img src="images/logo.JPG" alt="logo">
+                    <img src="images/logo.JPG" alt="logo">
+                    <img src="images/logo.JPG" alt="logo">
+                </div>
+            </div>
 
-.accordion-item {
-    border-bottom: 1px solid rgba(0, 64, 109, 0.15);
-}
+            <!-- Contact Section -->
+            <section class="contact-info" id="contact">
+                <h2>Contact Us</h2>
+                <p><img src="images/email.png" alt="Email:"> info@pillarremotesolutions.com</p>
+                <p><img src="images/phone.png" alt="Phone:"> 732-408-3295</p>
+                <a href="mailto:eli@pillarremotesolutions.com?subject=Online Reach Out" class="contact-button">
 
-.accordion-header {
-    width: 100%;
-    background: none;
-    border: none;
-    padding: 25px 0;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 1.6rem;
-    font-weight: 600;
-    color: var(--primary-color);
-}
+                </a>
+            </section>
 
-.accordion-left {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
 
-.accordion-icon {
-    font-size: 1.5rem;
-    transition: transform 0.3s ease;
-}
+    </main>
 
-.accordion-item.active .accordion-icon {
-    transform: rotate(45deg);
-}
+    <!-- Footer -->
+    <footer class="footer">
+        &copy; 2026 Pillar Remote Solutions. All rights reserved.
+    </footer>
 
-.accordion-content {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease;
-}
+    <script src="script.js"></script>
+</body>
 
-.accordion-content ul {
-    list-style: none;
-    margin-top: 15px;
-}
-
-.accordion-content li {
-    position: relative;
-    padding-left: 40px;
-    margin-bottom: 14px;
-    font-size: 1.5rem;
-    line-height: 2;
-    color: var(--text-color);
-    text-align: justify;
-}
-
-.accordion-content li::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 12px;
-    width: 20px;
-    height: 20px;
-    background-image: url("images/logo.JPG");
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-/* CONTACT */
-.contact-info {
-    background: #fff;
-    padding: 0 2rem 3rem;
-    text-align: center;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.06);
-}
-
-.contact-info h2 {
-    color: var(--primary-color);
-    font-size: 2rem;
-}
-
-.contact-info p {
-    font-size: 1.5rem;
-    line-height: 2;
-    margin-top: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-    text-align: justify;
-}
-
-/* FOOTER */
-.footer {
-    background-color: var(--primary-color);
-    color: white;
-    text-align: center;
-    padding: 1.2rem;
-    font-size: 0.9rem;
-}
-
-/* MOBILE */
-@media (max-width: 768px) {
-    :root {
-        --header-height: 90px;
-    }
-
-    .logo img {
-        height: 60px;
-    }
-
-    .company-name {
-        font-size: 0.9rem;
-    }
-
-    .hamburger {
-        font-size: 1.6rem;
-    }
-
-    main {
-        padding-top: calc(var(--header-height) + 10px);
-    }
-
-    .line {
-        font-size: 1.6rem;
-    }
-
-    #what-we-do p,
-    #why-use-us p,
-    .accordion-content li,
-    .contact-info p {
-        font-size: 1.1rem;
-    }
-
-    /* disable justify on mobile (prevents ugly spacing) */
-    p, li {
-        text-align: left;
-    }
-
-    .contact-info {
-        padding: 1.5rem;
-        margin: 1.5rem;
-    }
-
-    .contact-info p {
-        flex-direction: column;
-        gap: 8px;
-        text-align: center;
-    }
-
-    .contact-info p img {
-        width: 30px;
-        height: 30px;
-    }
-}
+</html>
